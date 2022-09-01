@@ -3,7 +3,7 @@ package entities
 import "golang.org/x/text/date"
 
 type User struct {
-	ID       int16
+	ID       string
 	Fullname string
 	Role     string
 	Email    string
