@@ -1,11 +1,11 @@
 package entities
 
-import   "time"
+import (
+
+	"gorm.io/gorm"
+)
 
 type Type struct {
-	ID         string
+	gorm.Model
 	Name       string
-	CreateDate time.Time
-	UpdateDate time.Time
-
 }

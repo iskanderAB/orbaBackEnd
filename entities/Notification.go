@@ -2,14 +2,14 @@ package entities
 
 import (
 	"image"
-	"time"
+
+	"gorm.io/gorm"
 )
 
 type Notification struct {
-	ID          string
+	gorm.Model
 	Description string
 	Title       string
 	Icon        image.Image
 	Img   		image.Image
-	Created_at  time.Time
 }

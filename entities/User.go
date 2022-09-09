@@ -1,17 +1,21 @@
 package entities
 
-import "golang.org/x/text/date"
+import (
+  
+	"gorm.io/gorm"
+	
+)
 
 type User struct {
-	ID       string
+	gorm.Model
 	Fullname string
 	Role     string
 	Email    string
-	Birthday string
 	Gender string
 	Telephone int32
 	Password int16
+	location Location 
 
 
-
+ 
 }

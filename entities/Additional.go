@@ -1,9 +1,13 @@
 package entities
 
-import "image"
+import (
+	"image"
+
+	"gorm.io/gorm"
+)
 
 type Additional struct {
-	ID    string
+    gorm.Model
 	Title string
 	Img   image.Image
 	Attribute string

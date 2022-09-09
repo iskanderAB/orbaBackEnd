@@ -1,9 +1,13 @@
 package entities
 
-import "image"
+import (
+	"image"
+
+	"gorm.io/gorm"
+)
 
 type Provider struct {
-	ID          string
+	gorm.Model
 	Name        string
 	img         image.Image
 	Description string

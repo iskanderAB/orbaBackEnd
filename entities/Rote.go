@@ -1,12 +1,10 @@
 package entities
 
-import "time"
+import "gorm.io/gorm"
 
 type Rote struct {
-	IDUser     string
+	gorm.Model
 	Attribute  string
-	IDProduct  string
-	Created_at time.Time
+	ProductID  string
 	Rate int16
-	Updated_at time.Time
 }

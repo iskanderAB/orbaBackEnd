@@ -1,10 +1,12 @@
 package entities
 
-import "time" 
+import (
+
+	"gorm.io/gorm"
+)
 type Command struct{
-	ID string
+	gorm.Model
 	TotalPrix float64
 	Status string
 	Attribute string
-	Created_at time.Time
 }

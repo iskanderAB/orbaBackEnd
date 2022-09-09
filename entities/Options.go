@@ -1,12 +1,14 @@
 package entities
 
-import "time"
+import (
+
+	"gorm.io/gorm"
+)
 
 type Options struct {
-	ID          string
+	gorm.Model
 	Title       string
 	Description string
 	Prix        float64
-	Time        time.Time
 	
 }

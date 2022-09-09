@@ -1,5 +1,8 @@
 package entities
-type Command_line struct{
-	ID string
+
+import "gorm.io/gorm"
+
+type Command_line struct {
+	gorm.Model
 	Quantity int16
 }

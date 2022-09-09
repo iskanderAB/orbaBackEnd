@@ -1,5 +1,8 @@
 package entities
-type Reclamation struct{
-	ID string
+
+import "gorm.io/gorm"
+
+type Reclamation struct {
+	gorm.Model
 	Description string
 }

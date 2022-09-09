@@ -1,6 +1,10 @@
 package entities
+
+import "gorm.io/gorm"
+
 type Location struct {
-	ID string
+	gorm.Model
 	AMD float64
 	LAN float64
+	UserID uint
 }

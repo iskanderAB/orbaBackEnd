@@ -1,7 +1,13 @@
 package entities
-import"time"
+
+import (
+
+	"gorm.io/gorm"
+)
 type Favorite struct{
-	IDUser string
-	IDProduct string
-	Created_at time.Time
+	gorm.Model
+	UserID string
+	ProductID string
+
+
 }
