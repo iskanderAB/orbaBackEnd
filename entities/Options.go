@@ -10,5 +10,6 @@ type Options struct {
 	Title       string
 	Description string
 	Prix        float64
+	ProductID   uint 
 	
 }

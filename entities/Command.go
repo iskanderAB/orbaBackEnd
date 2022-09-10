@@ -9,4 +9,6 @@ type Command struct{
 	TotalPrix float64
 	Status string
 	Attribute string
+	UserID uint
+	Command_lines []Command_line
 }

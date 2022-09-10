@@ -35,22 +35,9 @@ func main() {
 
 	if err == nil {
 		db.AutoMigrate(&entities.User{})
-	    db.AutoMigrate(&entities.Additional{})
+	   
 
-		db.AutoMigrate(&entities.Category{})
-
-		db.AutoMigrate(&entities.Command{})
-		db.AutoMigrate(&entities.Command_line{})
-		db.AutoMigrate(&entities.Favorite{})
-
-		db.AutoMigrate(&entities.Location{})
-		db.AutoMigrate(&entities.Notification{})
-		db.AutoMigrate(&entities.Options{})
-		db.AutoMigrate(&entities.Product{})
-		db.AutoMigrate(&entities.Provider{})
-		db.AutoMigrate(&entities.Reclamation{})
-		db.AutoMigrate(&entities.Rote{})
-		db.AutoMigrate(&entities.Type{})
+		
 
 
 

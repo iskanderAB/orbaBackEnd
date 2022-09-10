@@ -11,4 +11,7 @@ type Provider struct {
 	Name        string
 	img         image.Image
 	Description string
+	UserID      uint
+	Types []Type `gorm:"many2many:Provider_Type"`
+	Categorys []Category `gorm:"many2many:Provider_Category"`
 }

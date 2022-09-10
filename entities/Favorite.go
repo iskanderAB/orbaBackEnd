@@ -6,8 +6,9 @@ import (
 )
 type Favorite struct{
 	gorm.Model
-	UserID string
-	ProductID string
+	UserID uint
+	ProductID uint
+
 
 
 }
