@@ -8,13 +8,13 @@ import (
 
 type User struct {
 	gorm.Model
-	Fullname string
-	Role     string
-	Email    string
-	Gender string
-	Telephone int32
-	Password int16
-	location Location 
+	Fullname string `json:"fullname"`
+	Role     string `json:"role"`
+	Email    string  `json:"email"`
+	Gender string    `json:"gendre"`
+	Telephone int32   `json:"telephone"`    
+	Password int16   `json:"password"`
+	location Location  
 	Providers[] Provider 
 	Favorites[] Favorite 
 	Reclamations[] Reclamation
@@ -24,4 +24,23 @@ type User struct {
 
 
  
+}
+func NewUser(name string,role string,email string,gendre string, telephone int32,password int16,location Location)User{
+	user:=User{
+		Fullname: name,
+		Role:role,
+		Email: email,
+		Gender: gendre,
+		Telephone: telephone,
+		Password: password,
+		location: location,
+		Providers: []Provider{} ,
+		Favorites: []Favorite{},
+		Reclamations: []Reclamation{},
+		Rotes: []Rote{},
+		Notifications: []Notification{},
+		
+
+	}
+	return user
 }

@@ -1,7 +1,7 @@
 package entities
 
 import (
-	"image"
+	
 
 	"gorm.io/gorm"
 )
@@ -9,8 +9,20 @@ import (
 type Additional struct {
     gorm.Model
 	Title string
-	Img   image.Image
+	Img   string
 	Attribute string
 	Prix float32 
 	Description string
+}
+func NewAdditional (tittle string, img string,attribute string,prix float32,description string)Additional{
+	add := Additional{
+		Title: tittle,
+		Img: img,
+		Attribute: attribute,
+		Prix: prix,
+		Description: description,
+
+	}
+	return add
+
 }

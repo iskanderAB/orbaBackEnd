@@ -12,3 +12,10 @@ type Favorite struct{
 
 
 }
+func NewFavorite(userid uint,productid uint)Favorite{
+	fav:= Favorite{
+		UserID: userid,
+		ProductID: productid,
+	}
+	return fav
+}

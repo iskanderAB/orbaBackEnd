@@ -1,7 +1,6 @@
 package entities
 
 import (
-	"image"
 
 	"gorm.io/gorm"
 )
@@ -10,6 +9,15 @@ type Notification struct {
 	gorm.Model
 	Description string
 	Title       string
-	Icon        image.Image
-	Img   		image.Image
+	Icon        string
+	Img   		string
+}
+func NewNotification(description string , title string,icon string,img string)Notification{
+	not :=Notification{
+		Description: description,
+		Title: title,
+		Icon: icon,
+		Img: img,
+	}
+	return not
 }

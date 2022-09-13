@@ -7,3 +7,11 @@ type Reclamation struct {
 	Description string
 	UserID uint
 }
+func NewReclamatin (description string,userid uint)Reclamation{
+	rec :=Reclamation{
+		Description: description,
+		UserID: userid,
+
+	}
+	return rec
+}

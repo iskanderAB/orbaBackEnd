@@ -9,3 +9,10 @@ type Category struct{
 	Name string
 	Products []Product 
 }
+func NewCategory(name string)Category{
+	cat := Category{
+		Name: name,
+		Products: []Product{},
+	}
+	return cat
+}
