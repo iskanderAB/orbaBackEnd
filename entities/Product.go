@@ -11,7 +11,7 @@ type Product struct {
 	Title       string
 	Description string
 	Prix        float32
-	Option 		Option 
+	Options 		[]Option 
 	Additionals []Additional `gorm:"many2many:Product_Additional"`
 	Rotes []Rote
 	Favorites []Favorite 

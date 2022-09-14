@@ -3,16 +3,15 @@ package controllers
 import (
 	 "orba-back-end/entities"
 	 "orba-back-end/Config"
-
+	 "net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 func GetUsers(c *gin.Context) {
-	 users:= []entities.User{}
+	var users []entities.User
 	Config.DB.Find(&users)
-	 c.JSON(200,&users)
-    c.String(200,"hello")
+	c.JSON(http.StatusOK, gin.H{"data": users})
 }
  func CreateUser(c *gin.Context){
  	var user entities.User

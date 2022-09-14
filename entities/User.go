@@ -27,20 +27,20 @@ type User struct {
 }
 func NewUser(name string,role string,email string,gendre string, telephone int32,password int16,location Location)User{
 	user:=User{
-		Fullname: name,
-		Role:role,
-		Email: email,
-		Gender: gendre,
-		Telephone: telephone,
-		Password: password,
-		location: location,
-		Providers: []Provider{} ,
-		Favorites: []Favorite{},
-		Reclamations: []Reclamation{},
-		Rotes: []Rote{},
-		Notifications: []Notification{},
-		
-
+		Model:         gorm.Model{},
+		Fullname:      name,
+		Role:          role,
+		Email:         email,
+		Gender:        gendre,
+		Telephone:     telephone,
+		Password:      password,
+		// location:      location,
+		// Providers:     []Provider{},
+		// Favorites:     []Favorite{},
+		// Reclamations:  []Reclamation{},
+		// Commands:      []Command{},
+		// Rotes:         []Rote{},
+		// Notifications: []Notification{},
 	}
 	return user
 }

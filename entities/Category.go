@@ -11,7 +11,8 @@ type Category struct{
 }
 func NewCategory(name string)Category{
 	cat := Category{
-		Name: name,
+		Model:    gorm.Model{},
+		Name:     name,
 		Products: []Product{},
 	}
 	return cat
