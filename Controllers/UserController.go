@@ -19,3 +19,16 @@ func GetUsers(c *gin.Context) {
 	Config.DB.Create(&user)
  	c.JSON(200,&user)
  }
+ func DeleteUser(c *gin.Context){
+	var user entities.User 
+	Config.DB.Where("ID=?",c.Param("ID")).Delete(&user)
+	c.JSON(200,&user)
+ }
+ func UpdateUser(c *gin.Context){
+	var user entities.User 
+	Config.DB.Where("ID=?",c.Param("ID")).First(&user)
+	c.BindJSON(&user)
+	Config.DB.Save(&user)
+	c.JSON(200,&user)
+
+ }
