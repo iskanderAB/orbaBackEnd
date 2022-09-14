@@ -7,10 +7,10 @@ import (
 
 type Provider struct {
 	gorm.Model
-	Name        string
-	img         string
-	Description string
-	UserID      uint
+	Name        string `JSON:"name"`
+	img         string  `JSON:"img"`
+	Description string  `JSON:"description"`
+	UserID      uint	 `JSON:"userid"`
 	Types []Type `gorm:"many2many:Provider_Type"`
 	Categorys []Category `gorm:"many2many:Provider_Category"`
 }

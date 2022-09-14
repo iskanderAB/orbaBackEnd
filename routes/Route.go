@@ -13,3 +13,10 @@ func UserRoute(router *gin.Engine){
 	 router.PUT("/users/:ID",controllers.UpdateUser)
 
 }
+func ProviderRoute(router *gin.Engine){ 
+	router.GET("/Providers", controllers.GetProviders)
+	router.POST("/Providers",controllers.CreateProvider)
+	router.DELETE("/Providers/:ID",controllers.DeleteProvider)
+	router.PUT("/PRoviders/:ID",controllers.UpdateProvider)
+
+}

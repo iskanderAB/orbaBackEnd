@@ -13,6 +13,7 @@ func main() {
 
 	Config.Connection()
 	routes.UserRoute(r)
+	routes.ProviderRoute(r)
 
 	r.Run(":8080")
 	
