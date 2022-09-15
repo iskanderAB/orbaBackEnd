@@ -11,7 +11,7 @@ import (
 func GetUsers(c *gin.Context) {
 	var users []entities.User
 	Config.DB.Find(&users)
-	c.JSON(http.StatusOK, gin.H{"data": users})
+	c.JSON(http.StatusOK, gin.H{"USERS": users})
 }
  func CreateUser(c *gin.Context){
  	var user entities.User

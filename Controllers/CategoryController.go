@@ -7,7 +7,7 @@ import (
 	"orba-back-end/Config"
 )
 
-func GetCategory(c *gin.Context){
+func GetCategorys(c *gin.Context){
 	var category []entities.Category
 	Config.DB.Find(&category)
 	c.JSON(200,&category)

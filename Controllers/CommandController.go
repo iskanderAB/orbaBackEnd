@@ -8,10 +8,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetCommand_(c *gin.Context) {
+func GetCommands(c *gin.Context) {
 	var command []entities.Command
 	Config.DB.Find(&command)
-	c.JSON(http.StatusOK, gin.H{"data": command})
+	c.JSON(http.StatusOK, gin.H{"COMMANDS": command})
 }
  func CreateCommand(c *gin.Context){
  	var command entities.Command

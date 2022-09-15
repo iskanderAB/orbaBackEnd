@@ -8,10 +8,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetCommand_line(c *gin.Context) {
+func GetCommand_lines(c *gin.Context) {
 	var cl []entities.User
 	Config.DB.Find(&cl)
-	c.JSON(http.StatusOK, gin.H{"data": cl})
+	c.JSON(http.StatusOK, gin.H{"COMMAND_LINES": cl})
 }
  func CreateCommand_line(c *gin.Context){
  	var cl entities.Command_line

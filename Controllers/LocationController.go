@@ -11,7 +11,7 @@ import (
 func GetLocation(c *gin.Context) {
 	var locs []entities.Location
 	Config.DB.Find(&locs)
-	c.JSON(http.StatusOK, gin.H{"data": locs})
+	c.JSON(http.StatusOK, gin.H{"LOCATIONS": locs})
 }
  func CreateLocation(c *gin.Context){
  	var loc entities.Location

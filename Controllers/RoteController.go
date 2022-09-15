@@ -11,7 +11,7 @@ import (
 func GetRotes(c *gin.Context) {
 	var rotes []entities.Rote
 	Config.DB.Find(&rotes)
-	c.JSON(http.StatusOK, gin.H{"data": rotes})
+	c.JSON(http.StatusOK, gin.H{"ROTES": rotes})
 }
  func CreateRote(c *gin.Context){
  	var rote entities.Rote

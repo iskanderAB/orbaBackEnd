@@ -11,7 +11,7 @@ import (
 func GetFaviortes(c *gin.Context) {
 	var favorites []entities.Favorite
 	Config.DB.Find(&favorites)
-	c.JSON(http.StatusOK, gin.H{"data": favorites})
+	c.JSON(http.StatusOK, gin.H{"FAVORITES": favorites})
 }
  func CreateFavorite(c *gin.Context){
  	var favorite entities.Favorite

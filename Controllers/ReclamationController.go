@@ -8,10 +8,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetReclamation(c *gin.Context) {
+func GetReclamations(c *gin.Context) {
 	var recs []entities.Reclamation
 	Config.DB.Find(&recs)
-	c.JSON(http.StatusOK, gin.H{"data": recs})
+	c.JSON(http.StatusOK, gin.H{"RECLAMATIONS": recs})
 }
  func CreateReclamation(c *gin.Context){
  	var rec entities.Reclamation

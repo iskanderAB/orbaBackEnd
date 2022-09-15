@@ -11,7 +11,7 @@ import (
 func GetNotification(c *gin.Context) {
 	var users []entities.User
 	Config.DB.Find(&users)
-	c.JSON(http.StatusOK, gin.H{"data": users})
+	c.JSON(http.StatusOK, gin.H{"NOTIFICATIONS": users})
 }
  func CreateNotification(c *gin.Context){
  	var not entities.Notification

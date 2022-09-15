@@ -11,7 +11,7 @@ import (
 func GetOptions(c *gin.Context) {
 	var opts []entities.Option
 	Config.DB.Find(&opts)
-	c.JSON(http.StatusOK, gin.H{"data": opts})
+	c.JSON(http.StatusOK, gin.H{"OPTIONS": opts})
 }
  func CreateOption(c *gin.Context){
  	var opt entities.Option

@@ -11,7 +11,7 @@ import (
 func GetProviders(c *gin.Context) {
 	var provs []entities.Provider
 	Config.DB.Find(&provs)
-	c.JSON(http.StatusOK, gin.H{"data": provs})
+	c.JSON(http.StatusOK, gin.H{"PROVIDERS": provs})
 }
  func CreateProvider(c *gin.Context){
  	var prov entities.Provider

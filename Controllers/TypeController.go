@@ -8,10 +8,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetType(c *gin.Context) {
+func GetTypes(c *gin.Context) {
 	var tps []entities.Type
 	Config.DB.Find(&tps)
-	c.JSON(http.StatusOK, gin.H{"data": tps})
+	c.JSON(http.StatusOK, gin.H{"TYPES": tps})
 }
  func CreateType(c *gin.Context){
  	var tp entities.Type
@@ -19,7 +19,7 @@ func GetType(c *gin.Context) {
 	Config.DB.Create(&tp)
  	c.JSON(200,&tp)
  }
- func Delete(c *gin.Context){
+ func DeleteType(c *gin.Context){
 	var tp entities.Type 
 	Config.DB.Where("ID=?",c.Param("ID")).Delete(&tp)
 	c.JSON(200,&tp)
