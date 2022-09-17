@@ -11,6 +11,8 @@ func UserRoute(router *gin.Engine){
 	 router.POST("/users",controllers.CreateUser)
 	 router.DELETE("/users/:ID",controllers.DeleteUser)
 	 router.PUT("/users/:ID",controllers.UpdateUser)
+	 router.POST("/singup",controllers.SingUp)
+	 router.POST("/login",controllers.Login)
 
 }
 func ProviderRoute(router *gin.Engine){ 
